@@ -29,6 +29,8 @@ char *find_exe(char *executable, char *fullpath)
 	while (token != NULL)
 	{
 		_strcpy(fullpath, token);
+		_strcat(fullpath, "/");
+		_strcpy(fullpath, executable);
 		if (stat(fullpath, &store) == 0 && access(fullpath, X_OK) == 0)
 		{
 			free(copy);
