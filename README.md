@@ -1,2 +1,5 @@
-# simple shell
-# ALX team project
+# ALX SIMPLE SHELL PROJECT
+
+
+
+Collaborator: Noad-Tadesse 
