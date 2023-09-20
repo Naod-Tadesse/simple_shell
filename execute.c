@@ -18,9 +18,7 @@ void execute(char *command, char **arguments, char **argv, inform *state)
 	child = fork();
 
 	if (child < 0)
-	{
 		perror("child error");
-	}
 	else if (child == 0)
 	{
 		val = execve(command, arguments, environ);
