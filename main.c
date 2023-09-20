@@ -23,13 +23,9 @@ int main(int argc, char *argv[])
 	{
 		interact = interactive();
 		if (interact)
-		{
 			write(1, "$ ", 2);
-		}
 		if (getline(&command, &buf_no, stdin) == -1)
-		{
 			break;
-		}
 		token = _strtok(command, delimiter);
 		argc = 0;
 
@@ -40,22 +36,16 @@ int main(int argc, char *argv[])
 		}
 		arguments[argc] = NULL;
 		if (argc != 0)
-		{
 			ret_value = check_command(arguments, argv, state);
-		}
 	}
 
 	free(command);
 	if (!interactive() && state->status)
-	{
 		exit(state->status);
-	}
 	if (ret_value == -3)
 	{
 		if (state->exit_num == -1)
-		{
 			exit(state->status);
-		}
 		exit(state->exit_num);
 	}
 	return (0);

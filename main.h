@@ -31,7 +31,7 @@ typedef struct cmd_type
 {
 	char *command;
 	int (*fun)();
-} command_type;
+} c_t;
 extern char **environ;
 
 char *_strdup(char *string);

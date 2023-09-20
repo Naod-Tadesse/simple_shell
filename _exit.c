@@ -3,9 +3,9 @@
 /**
  * terminal_exit - exits terminal
  * @arguments: arguments
- * @state:structure 
+ * @state:structure
  * @argv: argv
- * Return: status code 
+ * Return: status code
  */
 int terminal_exit(char **arguments, inform *state, char **argv)
 {
@@ -24,16 +24,15 @@ int terminal_exit(char **arguments, inform *state, char **argv)
 			write(2, argv[0], _strlen(argv[0]));
 			write(2, ": 1: ", 5);
 			write(2, arguments[0], _strlen(arguments[0]));
-			write(2, ": 1: ", 5);
-			write(2, "Illegal number: ", 16); 
-			write(2, arguments[1], _strlen(arguments[1])); 
+			write(2, ": Illegal number: ", 18);
+			write(2, arguments[1], _strlen(arguments[1]));
 			write(2, "\n", 1);
 			state->status = 2;
 			return (1);
 		}
 		state->exit_num = exit_status;
 		return (-3);
-	}	
+	}
 	state->exit_num = -1;
 	return (-3);
-}	
+}
