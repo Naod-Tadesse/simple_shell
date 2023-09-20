@@ -5,7 +5,7 @@
  * main - main code(entry) of the shell program
  * @argc: the number of argument passed through command line
  * @argv: pointer to the array of arguments passed through command line
- * Return: if successful 0
+ * Return: if successful 0, non zero value other wise
  */
 
 int main(int argc, char *argv[])
