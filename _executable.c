@@ -41,6 +41,7 @@ char *find_exe(char *executable, char *fullpath)
 			write(1, ": No such file or directory\n", 28);
 			return (NULL);
 		}
+		token = _strtok(NULL, ":");
 	}
 	free(copy);
 	return (NULL);
