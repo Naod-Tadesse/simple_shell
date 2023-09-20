@@ -32,7 +32,7 @@ typedef struct cmd_type
 	char *command;
 	int (*fun)();
 } command_type;
-extern char ** environ;
+extern char **environ;
 
 char *_strdup(char *string);
 int _strcmp(char *string1, char *string2);
