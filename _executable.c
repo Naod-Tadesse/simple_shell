@@ -26,6 +26,15 @@ char *find_exe(char *executable, char *fullpath)
 	}
 	token = _strtok(copy, ":");
 
+	while (token != NULL)
+	{
+		_strcpy(fullpath, token);
+		if (stat(fullpath, &store) == 0 && access(fullpath, X_OK) == 0)
+		{
+			free(copy);
+			return (fullpath);
+		}
+	}
 	free(copy);
 	return (NULL);
 }
