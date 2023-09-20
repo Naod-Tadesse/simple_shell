@@ -17,7 +17,7 @@ int enviroment_print(char **arguments)
 	for (; *env != NULL; env++)
 	{
 		write(1, *env, _strlen(*env));
+		write(1, "\n", 1);
 	}
 	return (0);
 }
-
