@@ -13,7 +13,6 @@ int enviroment_print(char **arguments)
 	char **env = environ;
 
 	(void)arguments;
-
 	for (; *env != NULL; env++)
 	{
 		write(1, *env, _strlen(*env));
