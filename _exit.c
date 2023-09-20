@@ -18,7 +18,7 @@ int terminal_exit(char **arguments, inform *state, char **argv)
 
 	if (arguments[1])
 	{
-		exit_status = _atoi(arguments[i]);
+		exit_status = _atoi(arguments[1]);
 		if (exit_status = -1)
 		{
 			write(2, argv[0], _strlen(argv[0]));
