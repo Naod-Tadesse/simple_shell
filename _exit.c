@@ -19,7 +19,7 @@ int terminal_exit(char **arguments, inform *state, char **argv)
 	if (arguments[1])
 	{
 		exit_status = _atoi(arguments[1]);
-		if (exit_status = -1)
+		if (exit_status == -1)
 		{
 			write(2, argv[0], _strlen(argv[0]));
 			write(2, ": 1: ", 5);
@@ -31,6 +31,9 @@ int terminal_exit(char **arguments, inform *state, char **argv)
 			state->status = 2;
 			return (1);
 		}
+		state->exit_num = exit_status;
+		return (-3);
 	}	
+	state->exit_num = -1;
 	return (-3);
 }	
