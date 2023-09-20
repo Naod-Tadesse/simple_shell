@@ -12,7 +12,7 @@
 int check_command(char **arguments, char **argv, inform *state)
 {
 	c_t m[] = {{"env", enviroment_print}, {"exit", terminal_exit}, {NULL, NULL}};
-	int i, ret_value;
+	int i;
 	char *result, *pat, *cop, fullpath[MAX_LEN];
 	struct stat buf;
 
@@ -20,8 +20,7 @@ int check_command(char **arguments, char **argv, inform *state)
 	{
 		if (_strcmp(arguments[0], m[i].command) == 0)
 		{
-			ret_value = m[i].fun(arguments, state, argv);
-			return (ret_value);
+			return (m[i].fun(arguments, state, argv));
 		}
 	}
 	pat = getenv("PATH");
@@ -50,6 +49,7 @@ int check_command(char **arguments, char **argv, inform *state)
 			state->status = 127;
 		}
 	}
+	free(cop);
 	return (state->status);
 }
 
