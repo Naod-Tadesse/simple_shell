@@ -5,7 +5,7 @@
  * _atoi - converts string to integer
  * @string: pointer to string
  *
- * Return: integer
+ * Return: converted integer
  */
 int _atoi(char *string)
 {
