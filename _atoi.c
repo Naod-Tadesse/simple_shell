@@ -30,5 +30,10 @@ int _atoi(char *string)
 			}
 			i++;
 		}
+		else
+		{
+			return (-1);
+		}
+	}
 	return (num);
 }
