@@ -4,7 +4,6 @@
  * _strdup - allocates memory and copy string into new variable
  * @string: string to copy
  * Return: the copied string
- *
  */
 
 char *_strdup(char *string)
