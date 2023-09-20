@@ -25,6 +25,8 @@ int terminal_exit(char **arguments, inform *state, char **argv)
 			write(2, ": 1: ", 5);
 			write(2, arguments[0], _strlen(arguments[0]));
 			write(2, ": 1: ", 5);
+			write(2, "Illegal number: ", 16); 
+			write(2, arguments[1], _strlen(arguments[1])); 
 			return (1);
 		}
 	}	
