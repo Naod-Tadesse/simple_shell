@@ -34,6 +34,13 @@ char *find_exe(char *executable, char *fullpath)
 			free(copy);
 			return (fullpath);
 		}
+		if (stat(fullpath, &store) == 0 && access(fullpath, X_OK) == -1)
+		{
+			free(copy);
+			write(1, executable, _strlen(executable));
+			write(1, ": No such file or directory\n", 28);
+			return (NULL);
+		}
 	}
 	free(copy);
 	return (NULL);
